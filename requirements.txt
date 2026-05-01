@@ -1,0 +1,21 @@
+# ── OLX Car Price Model — Dependencies ──────────────────────────────
+# Install: pip install -r requirements.txt
+
+# Core ML
+lightgbm==4.6.0
+xgboost==3.2.0
+scikit-learn==1.8.0
+
+# Data
+pandas==3.0.2
+numpy==2.4.4
+
+# Model persistence
+joblib==1.5.3
+
+# Visualization (opsional, hanya untuk pipeline.py)
+matplotlib==3.10.8
+seaborn==0.13.2
+
+# Hyperparameter tuning (opsional, hanya untuk pipeline.py)
+optuna==4.8.0
