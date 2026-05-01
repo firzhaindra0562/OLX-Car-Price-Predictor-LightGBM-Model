@@ -1,0 +1,174 @@
+{
+  "model_name": "LightGBM Car Price Predictor",
+  "model_file": "lgbm_car_price.joblib",
+  "encoder_file": "label_encoders.joblib",
+  "target": "price (IDR)",
+  "target_transform": "log1p → expm1",
+  "features": [
+    "year",
+    "mileage",
+    "merek",
+    "transmisi",
+    "bahan_bakar",
+    "tipe_bodi",
+    "kapasitas_cc",
+    "tipe_penjual",
+    "warna",
+    "jumlah_foto",
+    "favorit",
+    "has_video",
+    "has_promotion",
+    "is_hot",
+    "car_age",
+    "km_per_year",
+    "listing_quality",
+    "is_luxury",
+    "is_japanese"
+  ],
+  "cat_features": [
+    "merek",
+    "transmisi",
+    "bahan_bakar",
+    "tipe_bodi",
+    "kapasitas_cc",
+    "tipe_penjual",
+    "warna"
+  ],
+  "bool_features": [
+    "has_video",
+    "has_promotion",
+    "is_hot"
+  ],
+  "engineered_features": [
+    "car_age",
+    "km_per_year",
+    "listing_quality",
+    "is_luxury",
+    "is_japanese"
+  ],
+  "training_rows": 1432,
+  "hyperparameters": {
+    "n_estimators": 620,
+    "max_depth": 3,
+    "learning_rate": 0.03251699981134279,
+    "num_leaves": 96,
+    "subsample": 0.9385174096405736,
+    "colsample_bytree": 0.530863019496191,
+    "reg_alpha": 0.10059175307195949,
+    "reg_lambda": 0.014722147254052775,
+    "min_child_samples": 8,
+    "random_state": 42,
+    "verbose": -1
+  },
+  "cv_metrics": {
+    "XGBoost (Tuned)": {
+      "R2": 0.7791,
+      "R2_std": 0.0135,
+      "MAE_juta": 61.59,
+      "MAPE_pct": 22.06
+    },
+    "LightGBM (Tuned)": {
+      "R2": 0.7827,
+      "R2_std": 0.0123,
+      "MAE_juta": 61.38,
+      "MAPE_pct": 22.16
+    }
+  },
+  "classes_per_encoder": {
+    "merek": [
+      "Audi",
+      "BMW",
+      "BYD",
+      "Chery",
+      "Chevrolet",
+      "DFSK",
+      "DFSK (Dongfeng Sokon)",
+      "Daihatsu",
+      "Datsun",
+      "Ford",
+      "Honda",
+      "Hummer",
+      "Hyundai",
+      "Isuzu",
+      "Jaecoo",
+      "Jaguar",
+      "Jeep",
+      "Kia",
+      "Lexus",
+      "MG",
+      "Mazda",
+      "Mercedes-Benz",
+      "Mini",
+      "Mini Cooper",
+      "Mitsubishi",
+      "Nissan",
+      "Peugeot",
+      "Porsche",
+      "Proton",
+      "Subaru",
+      "Suzuki",
+      "Toyota",
+      "Volkswagen",
+      "Wuling"
+    ],
+    "transmisi": [
+      "Automatic",
+      "Manual"
+    ],
+    "bahan_bakar": [
+      "Bensin",
+      "Diesel",
+      "Hybrid",
+      "Listrik"
+    ],
+    "tipe_bodi": [
+      "Bus",
+      "Classic Car",
+      "Compact & City Car",
+      "Convertible",
+      "Coupe",
+      "Double Cabin",
+      "Hatchback",
+      "Jeep",
+      "MPV",
+      "Minibus",
+      "Pick-up",
+      "SUV",
+      "Sedan",
+      "Sports & Super Car",
+      "Truk",
+      "Unknown",
+      "Van",
+      "Wagon"
+    ],
+    "kapasitas_cc": [
+      "<1.000 cc",
+      ">1.000 - 1.500 cc",
+      ">1.500 - 2.000 cc",
+      ">2.000 - 3.000 cc",
+      ">3.000 cc",
+      "Unknown"
+    ],
+    "tipe_penjual": [
+      "Diler",
+      "Individu",
+      "Unknown"
+    ],
+    "warna": [
+      "Abu-abu",
+      "Biru",
+      "Coklat",
+      "Emas",
+      "Hijau",
+      "Hitam",
+      "Kuning",
+      "Lainnya",
+      "Marun",
+      "Merah",
+      "Oranye",
+      "Putih",
+      "Silver",
+      "Ungu"
+    ]
+  }
+}
