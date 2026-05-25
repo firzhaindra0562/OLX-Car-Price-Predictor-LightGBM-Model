@@ -1,4 +1,4 @@
-# 🚗 OLX Car Price Predictor — LightGBM Model
+#  OLX Car Price Predictor — LightGBM Model
 
 Model prediksi harga mobil bekas dari data listing OLX Indonesia,
 dibangun menggunakan LightGBM dengan hyperparameter tuning via Optuna.
@@ -8,7 +8,7 @@ dibangun menggunakan LightGBM dengan hyperparameter tuning via Optuna.
 ## 📁 Struktur File
 
 ```
-📦 olx-car-price-model/
+olx-car-price-model/
 ├── model_artifacts/
 │   ├── lgbm_car_price.joblib     ← Model utama (LightGBM)
 │   ├── label_encoders.joblib     ← Encoder untuk fitur kategorikal
@@ -22,7 +22,7 @@ dibangun menggunakan LightGBM dengan hyperparameter tuning via Optuna.
 
 ---
 
-## ⚙️ Instalasi
+## Instalasi
 
 ```bash
 pip install -r requirements.txt
@@ -30,7 +30,7 @@ pip install -r requirements.txt
 
 ---
 
-## 🚀 Cara Penggunaan
+## Cara Penggunaan
 
 ### 1. Demo cepat (3 contoh prediksi)
 
@@ -102,7 +102,7 @@ print(df_input[["merek","year","mileage","predicted_price"]].head())
 
 ---
 
-## 🔧 Fitur yang Digunakan (19 fitur)
+## Fitur yang Digunakan (19 fitur)
 
 | Fitur             | Tipe         | Keterangan                           |
 |-------------------|--------------|--------------------------------------|
@@ -128,7 +128,7 @@ print(df_input[["merek","year","mileage","predicted_price"]].head())
 
 ---
 
-## 🧹 Data Cleaning yang Dilakukan
+## Data Cleaning yang Dilakukan
 
 | Step                        | Baris Dihapus | Alasan                                      |
 |-----------------------------|:---:|---------------------------------------------|
@@ -141,7 +141,7 @@ print(df_input[["merek","year","mileage","predicted_price"]].head())
 
 ---
 
-## ⚠️ Catatan Penting
+## Catatan Penting
 
 - **Target transform**: model dilatih pada `log1p(price)`, prediksi dikembalikan ke IDR asli dengan `expm1()`
 - **Nilai kategori tidak dikenal**: jika nilai tidak ada di training data, akan di-encode sebagai `0` (Unknown)
@@ -150,7 +150,7 @@ print(df_input[["merek","year","mileage","predicted_price"]].head())
 
 ---
 
-## 📦 Hyperparameter Terbaik (Optuna, 60 trials)
+## Hyperparameter Terbaik (Optuna, 60 trials)
 
 Tersimpan di `model_artifacts/model_metadata.json`.
 
